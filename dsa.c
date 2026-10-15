@@ -142,3 +142,33 @@ int dsa_linear_search_strings(const char *items[], int count, const char *target
     }
     return -1;
 }
+/* Binary search expects alphabetically sorted input */
+int dsa_binary_search_strings(const char *items[], int count, const char *target) {
+    if (!items || !target) return -1;
+    int low = 0, high = count - 1;
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        int cmp = strcmp(items[mid], target);
+        if (cmp == 0) return mid;
+        if (cmp < 0) low = mid + 1;
+        else high = mid - 1;
+    }
+    return -1;
+}
+
+/* Insertion sort; the indices and their scores move together. */
+void dsa_insertion_sort_indices(int indices[], double scores[], int count) {
+    if (!indices || !scores || count < 2) return;
+    for (int i = 1; i < count; ++i) {
+        int key_index = indices[i];
+        double key_score = scores[i];
+        int j = i - 1;
+        while (j >= 0 && scores[j] < key_score) {
+            indices[j + 1] = indices[j];
+            scores[j + 1] = scores[j];
+            --j;
+        }
+        indices[j + 1] = key_index;
+        scores[j + 1] = key_score;
+    }
+}
