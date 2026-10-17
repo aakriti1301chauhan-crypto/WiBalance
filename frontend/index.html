@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiBalance | Network Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">W</div>
+            <div>
+                <h1>WiBalance</h1>
+                <p>Intelligent Wi-Fi Traffic Management</p>
+            </div>
+        </div>
+        <div class="connection">
+            <span class="dot"></span>
+            Simulation Dashboard
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <div>
+                <p class="eyebrow">NETWORK OVERVIEW</p>
+                <h2>Network Control Center</h2>
+                <p class="muted">Monitor access points, traffic and network health.</p>
+            </div>
+            <div class="tick-box">
+                <span>SIMULATION TICK</span>
+                <strong id="tick">0 / 50</strong>
+            </div>
+        </section>
+
+        <section class="stats">
+            <article class="stat-card">
+                <p>Total Access Points</p>
+                <strong id="apCount">2</strong>
+                <span>Network infrastructure</span>
+            </article>
+            <article class="stat-card">
+                <p>Connected Users</p>
+                <strong id="userCount">1</strong>
+                <span>Simulated clients</span>
+            </article>
+            <article class="stat-card">
+                <p>Average AP Load</p>
+                <strong id="avgLoad">1.4%</strong>
+                <span>Across all access points</span>
+            </article>
+            <article class="stat-card">
+                <p>Network Health</p>
+                <strong id="health">Healthy</strong>
+                <span>Based on AP load</span>
+            </article>
+        </section>
+
+<section class="panel">
+    <div class="section-heading">
+        <div>
+            <h2>Configure Simulation</h2>
+            <p>Set up the network before running WiBalance.</p>
+        </div>
+    </div>
+
+    <form id="configForm" class="config-form">
+        <label>
+            Number of Access Points (1–10)
+            <input id="configAPs" type="number"
+                   min="1" max="10" value="2" required>
+        </label>
+
+        <label>
+            Number of Users (1–200)
+            <input id="configUsers" type="number"
+                   min="1" max="200" value="10" required>
+        </label>
+
+        <label>
+            Capacity per AP (Mbps)
+            <input id="configCapacity" type="number"
+                   min="1" max="10000" value="100" required>
+        </label>
+
+        <button type="submit">Apply Configuration</button>
+    </form>
+
+    <p id="configMessage" role="status"></p>
+</section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <div>
+                    <h2>Access Points</h2>
+                    <p class="muted">Monitor capacity and congestion.</p>
+                </div>
+                <span class="pill">LIVE SIMULATION PREVIEW</span>
+            </div>
+            <div id="apGrid" class="ap-grid"></div>
+        </section>
+
+        <section class="panel controls">
+            <div>
+                <h2>Simulation Controls</h2>
+                <p class="muted">Preview the dashboard interactions.</p>
+            </div>
+            <div class="buttons">
+                <button id="startBtn">▶ Start</button>
+                <button id="pauseBtn" class="secondary">Ⅱ Pause</button>
+                <button id="resetBtn" class="secondary">↻ Reset</button>
+            </div>
+            <p id="statusMessage" class="status-message">
+                Demo mode: sample data, not yet connected to C++.
+            </p>
+        </section>
+
+        <footer>
+            WiBalance · Smart Wi-Fi Management System
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
