@@ -26,3 +26,22 @@ struct WiBalanceAPStatus {
     int maxUsers = 0;
     std::string status = "HEALTHY";
 };
+struct WiBalanceUserStatus {
+    std::string id;
+    std::string assignedAP;
+    std::string trafficType;
+
+    double demandMbps = 0.0;
+    double signalDbm = -100.0;
+
+    int priority = 2;
+    bool mobile = false;
+};
+
+struct WiBalanceSnapshot {
+    WiBalanceStatus status;
+    std::vector<WiBalanceAPStatus> accessPoints;
+    std::vector<WiBalanceUserStatus> users;
+};
+
+#endif
