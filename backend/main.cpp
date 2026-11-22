@@ -19,28 +19,7 @@
     
 
 
-double getAPLoad(int index) const {
-    if (index < 0 || index >= static_cast<int>(accessPoints.size())) {
-        return 0.0;
-    }
-    return accessPoints[static_cast<size_t>(index)].loadPercent;
-}
 
-std::string getAPId(int index) const {
-    if (index < 0 || index >= static_cast<int>(accessPoints.size())) {
-        return "";
-    }
-    return accessPoints[static_cast<size_t>(index)].id;
-}
-
-int getAPUserCount(int index) const {
-    if (index < 0 || index >= static_cast<int>(accessPoints.size())) {
-        return 0;
-    }
-    return static_cast<int>(
-        accessPoints[static_cast<size_t>(index)].userIds.size()
-    );
-}
 
 WiBalanceStatus getStatus() const {
     WiBalanceStatus status;
