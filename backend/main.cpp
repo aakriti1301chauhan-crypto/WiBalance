@@ -1,25 +1,5 @@
 
 
-    json << "\"users\":[";
-    for (size_t i = 0; i < snapshot.users.size(); ++i) {
-        if (i > 0) json << ",";
-        const auto& user = snapshot.users[i];
-
-        json << "{";
-        json << "\"id\":\"" << user.id << "\",";
-        json << "\"assignedAP\":\"" << user.assignedAP << "\",";
-        json << "\"trafficType\":\"" << user.trafficType << "\",";
-        json << "\"demandMbps\":" << user.demandMbps << ",";
-        json << "\"signalDbm\":" << user.signalDbm << ",";
-        json << "\"priority\":" << user.priority << ",";
-        json << "\"mobile\":" << (user.mobile ? "true" : "false");
-        json << "}";
-    }
-    json << "]}";
-
-    return json.str();
-}
-
 
 void runHttpServer(WiBalance& application) {
     WSADATA wsaData;
