@@ -19,25 +19,6 @@
     
 
 
-
-
-
-int getCurrentTick() const {
-    return tick;
-}
-
-int getTotalTicks() const {
-    return finalTick;
-}
-
-int getAccessPointCount() const {
-    return static_cast<int>(accessPoints.size());
-}
-
-int getUserCount() const {
-    return static_cast<int>(users.size());
-}
-
 double getAPLoad(int index) const {
     if (index < 0 || index >= static_cast<int>(accessPoints.size())) {
         return 0.0;
