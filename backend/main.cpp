@@ -1,8 +1,6 @@
 
 
 
-static const int DEFAULT_FINAL_TICK = 50;
-static const double CONGESTION_LIMIT = 80.0;
 
 class User {
 public:
