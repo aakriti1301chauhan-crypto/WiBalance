@@ -21,13 +21,4 @@ int dsa_hash_put(DSAHashHandle table, const char *key, int value);
 int dsa_hash_get(DSAHashHandle table, const char *key, int *out_value);
 
 int dsa_linear_search_strings(const char *items[], int count, const char *target);
-int dsa_binary_search_strings(const char *items[], int count, const char *target);
-
-/* Sort indices by associated score, highest score first. Implemented in C. */
-void dsa_insertion_sort_indices(int indices[], double scores[], int count);
-
-#ifdef __cplusplus
-}
-#endif
-#endif
-
+int ds
