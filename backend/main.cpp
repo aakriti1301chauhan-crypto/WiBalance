@@ -10,20 +10,7 @@
     int maxUsers;
     double coverageRadius;
     double baseLatencyMs;
-    double x;
-    double y;
-    vector<string> userIds;
-    double assignedDemandMbps;
-    double loadPercent;
-    double channelUtilization;
-    double latencyMs;
-    double packetLossPercent;
-
-    AccessPoint()
-        : capacityMbps(100.0), maxUsers(25), coverageRadius(100.0),
-          baseLatencyMs(8.0), x(0.0), y(0.0), assignedDemandMbps(0.0),
-          loadPercent(0.0), channelUtilization(0.0), latencyMs(8.0),
-          packetLossPercent(0.0) {}
+    
 };
 
 class WiBalance {
