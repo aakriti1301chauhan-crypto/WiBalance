@@ -6,26 +6,7 @@
    
 
 
-   
-
-    void addAP() {
-        AccessPoint ap;
-        ap.id = readLine("Access Point ID [blank = auto]: ");
-        if (ap.id.empty()) ap.id = makeNextAPId();
-        if (findAPIndex(ap.id) >= 0) {
-            cout << "An AP with that ID already exists.\n";
-            return;
-        }
-        ap.capacityMbps = readPositiveDouble("Total capacity (Mbps) [default 100]: ", 100.0);
-        ap.maxUsers = readInt("Maximum supported users [default 25]: ", 1, 10000, 25);
-        ap.coverageRadius = readPositiveDouble("Coverage radius (meters) [default 100]: ", 100.0);
-        ap.baseLatencyMs = readPositiveDouble("Base latency (ms) [default 8]: ", 8.0);
-        ap.x = readCoordinate("AP location X [default 0]: ", 0.0);
-        ap.y = readCoordinate("AP location Y [default 0]: ", 0.0);
-        accessPoints.push_back(ap);
-        cout << "\nAdded " << ap.id << ".\n";
-        askToRunAfterChange();
-    }
+ 
 
     void removeAP() {
         if (accessPoints.empty()) {
