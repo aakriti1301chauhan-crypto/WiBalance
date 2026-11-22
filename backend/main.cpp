@@ -17,29 +17,7 @@
    
 
     
-void startSimulation() {
-    if (!beginSimulation()) {
-        return;
-    }
 
-    cout << "\nStarting WiBalance simulation: "
-         << finalTick << " ticks.\n";
-
-    while (advanceOneTick()) {
-        if (tick == 1 || tick % 10 == 0 || tick == finalTick) {
-            int assigned = 0;
-
-            for (size_t i = 0; i < users.size(); ++i) {
-                if (!users[i].currentAP.empty()) {
-                    ++assigned;
-                }
-            }
-
-            cout << "Tick " << tick << "/" << finalTick
-                 << " completed | users assigned: "
-                 << assigned << "/" << users.size() << "\n";
-        }
-    }
 
     cout << "\nSimulation finished at tick " << tick << ".\n";
     cout << "\n--- FINAL ACCESS POINT RESULTS ---\n";
