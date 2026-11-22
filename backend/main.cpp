@@ -16,14 +16,7 @@
 
    
  0.15 * clientScore);
-    }
-        double bestScore = -1.0e9;
-        for (int i = 0; i < static_cast<int>(accessPoints.size()); ++i) {
-            double score = candidateScore(user, accessPoints[static_cast<size_t>(i)]);
-            if (score > bestScore) {
-                bestScore = score;
-                bestIndex = i;
-            }
+
         }
         return bestIndex;
     }
