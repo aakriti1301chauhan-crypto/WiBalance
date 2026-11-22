@@ -8,14 +8,7 @@
 
 
 
-  
-    int finalTick;
-    bool hasRun;
 
-    string makeNextAPId() const {
-        int largest = 0;
-        for (size_t i = 0; i < accessPoints.size(); ++i) {
-            co
 
     string makeNextUserId() const {
         int larg largest) largest = number;
