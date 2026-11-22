@@ -20,10 +20,7 @@
         }
         return bestIndex;
     assignedDemandMbps = 0.0;
-        
-        for (size_t i = 0; i < users.size(); ++i) {
-            users[i].currentAP.clear();
-            users[i].signalDbm = -100.0;
+        signalDbm = -100.0;
         }
     }
 
