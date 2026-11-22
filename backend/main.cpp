@@ -15,12 +15,7 @@
             dsa_hash_put(userHash, users[i].id.c_str(), i);
         }
     }
-
-    int findUserIndex(const string& id) const {
-        int index = -1;
-        if (!dsa_hash_get(userHash, id.c_str(), &index)) return -1;
-        if (index < 0 || index >= static_cast<int>(users.size())) return -1;
-        if (users[static_cast<size_t>(index)].id != id) return -1;
+t<size_t>(index)].id != id) return -1;
         return index;
     }
 
