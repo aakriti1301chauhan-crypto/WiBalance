@@ -2,46 +2,6 @@
 
 
 
-
-   
-
-
- 
-
-
-   
-    
-
-    for (int i = 0; i < userCount; ++i) {
-        User user;
-        user.id = "U" + to_string(101 + i);
-        user.trafficType = trafficTypes[i % 6];
-        user.requestedMbps = 10.0;
-        user.minimumMbps = 1.0;
-        user.currentDemandMbps = 5.0;
-        user.priority = (i % 3) + 1;
-        user.mobile = (i % 2 == 0);
-
-        // Distribute users across the simulated area.
-        user.x = (i % 100) * 100.0 / 99.0;
-        user.y = (i / 100) * 10.0;
-
-        users.push_back(user);
-    }
-
-    rebuildUserHash();
-
-    tick = 0;
-    hasRun = false;
-
-    updateTrafficDemand();
-    globallyRedistributeUsers();
-
-    return true;
-}
-
-
-
     ~WiBalance() {
         dsa_queue_destroy(assignmentQueue);
         dsa_hash_destroy(userHash);
