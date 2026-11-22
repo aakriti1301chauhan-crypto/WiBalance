@@ -20,38 +20,7 @@
 
 
 
-public:
-    WiBalance()
-        : userHash(dsa_hash_create()), assignmentQueue(dsa_queue_create()),
-          randomEngine(static_cast<unsigned int>(time(NULL))), tick(0),
-          finalTick(DEFAULT_FINAL_TICK), hasRun(false) {}
-          
-bool beginSimulation() {
-    if (accessPoints.empty() || users.empty()) {
-        cout << "Add at least one AP and one user before starting.\n";
-        return false;
-    }
 
-    tick = 0;
-    hasRun = false;
-    return true;
-}
-
-bool advanceOneTick() {
-    if (tick >= finalTick) {
-        return false;
-    }
-
-    updateTrafficDemand();
-    globallyRedistributeUsers();
-    ++tick;
-
-    if (tick >= finalTick) {
-        hasRun = true;
-    }
-
-    return true;
-}
 
 int getCurrentTick() const {
     return tick;
