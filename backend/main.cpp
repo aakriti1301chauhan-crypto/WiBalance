@@ -1,25 +1,6 @@
 
 
 
-        while (true) {
-            cout << "\n--- MAIN MENU | Last run: "
-                 << (hasRun ? to_string(tick) + "/" + to_string(finalTick) : "not run")
-                 << " ---\n"
-                 << "1. Add Access Point\n"
-                 << "2. Remove Access Point\n"
-                 << "3. Add User\n"
-                 << "4. Remove User\n"
-                 << "5. View Access Points\n"
-                 << "6. View Users\n"
-                 << "7. Start Simulation (run until final tick)\n"
-                 << "8. Show Summary\n"
-                 << "0. Exit\n";
-            int choice = readInt("Choose option: ", 0, 8, -1);
-            switch (choice) {
-                c
-}
-#else
-
 
 string snapshotToJson(const WiBalance& application) {
     WiBalanceSnapshot snapshot = application.getSnapshot();
