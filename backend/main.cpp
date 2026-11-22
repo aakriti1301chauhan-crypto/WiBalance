@@ -17,19 +17,7 @@
             int choice = readInt("Choose option: ", 0, 8, -1);
             switch (choice) {
                 case 1: addAP(); break;
-                case 2: removeAP(); break;
-                case 3: addUser(); break;
-                case 4: removeUser(); break;
-                case 5: showAPs(); break;
-                case 6: showUsers(); break;
-                case 7: startSimulation(); break;
-                case 8: showSummary(); break;
-                case 0: cout << "Exiting WiBalance.\n"; return;
-                default: cout << "Invalid choice.\n"; break;
-            }
-        }
-    }
-};
+                case 2: remov
 
 
 #ifndef WIBALANCE_HTTP_SERVER
