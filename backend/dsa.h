@@ -14,11 +14,4 @@ void dsa_queue_destroy(DSAQueueHandle queue);
 int dsa_queue_enqueue(DSAQueueHandle queue, const char *value);
 int dsa_queue_dequeue(DSAQueueHandle queue, char *out_value, int out_size);
 
-DSAHashHandle dsa_hash_create(void);
-void dsa_hash_destroy(DSAHashHandle table);
-void dsa_hash_clear(DSAHashHandle table);
-int dsa_hash_put(DSAHashHandle table, const char *key, int value);
-int dsa_hash_get(DSAHashHandle table, const char *key, int *out_value);
 
-int dsa_linear_search_strings(const char *items[], int count, const char *target);
-int ds
