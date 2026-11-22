@@ -2,18 +2,6 @@
 
 
 
-            string line;
-            getline(cin, line);
-            if (line.empty()) return fallback;
-            stringstream stream(line);
-            double value;
-            char extra;
-            if ((stream >> value) && !(stream >> extra) && isfinite(value) && value > 0.0)
-                return value;
-            cout << "Enter a positive number.\n";
-        }
-    }
-
     double readCoordinate(const string& prompt, double fallback) {
         while (true) {
             cout << prompt;
