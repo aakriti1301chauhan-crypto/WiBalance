@@ -16,17 +16,6 @@
 
    
 
-    double candidateScore(const User& user, const AccessPoint& ap) const {
-        double distance = distanceBetween(user.x, user.y, ap.x, ap.y);
-        double signal = signalAt(user, ap);
-        if (distance > ap.coverageRadius || signal < -83.0) return -1.0e9;
-
-        double projectedLoad = 0.0;
-        if (ap.capacityMbps > 0.0)
-            projectedLoad = (ap.assignedDemandMbps + user.currentDemandMbps) / ap.capacityMbps * 100.0;
-        else
-            projectedLoad = 1000.0;
-
         double projectedClients = static_cast<double>(ap.userIds.size() + 1);
         double clientPercent = ap.maxUsers > 0 ? projectedClients / ap.maxUsers * 100.0 : 1000.0;
         double predictedLatency = ap.baseLatencyMs + (projectedLoad > 40.0 ? (projectedLoad - 40.0) * 0.50 : 0.0);
