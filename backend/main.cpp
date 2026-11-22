@@ -15,14 +15,7 @@
     
 
    
- 0.15 * clientScore);
 
-        }
-        return bestIndex;
-    assignedDemandMbps = 0.0;
-        signalDbm = -100.0;
-        }
-    }
 
     void recalculateAPMetrics() {
         for (size_t i = 0; i < accessPoints.size(); ++i) {
