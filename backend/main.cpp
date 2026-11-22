@@ -14,27 +14,7 @@
 
    
 
-    void showUsers() const {
-        if (users.empty()) {
-            cout << "No users configured.\n";
-            return;
-        }
-        cout << left << setw(8) << "User" << setw(12) << "Assigned AP"
-             << setw(12) << "Traffic" << setw(10) << "Priority"
-             << right << setw(12) << "Demand" << setw(11) << "Signal"
-             << "   Location\n";
-        cout << string(88, '-') << "\n";
-        for (size_t i = 0; i < users.size(); ++i) {
-            const User& user = users[i];
-            cout << left << setw(8) << user.id << setw(12)
-                 << (user.currentAP.empty() ? "Unassigned" : user.currentAP)
-                 << setw(12) << user.trafficType << setw(10) << priorityName(user.priority)
-                 << right << setw(9) << fixed << setprecision(2) << user.currentDemandMbps << " Mbps"
-                 << setw(8) << user.signalDbm << " dBm"
-                 << "   (" << user.x << ", " << user.y << ")"
-                 << (user.mobile ? " [Mobile]" : "") << "\n";
-        }
-    }
+   
 
     
 void startSimulation() {
