@@ -14,29 +14,6 @@
 
 
 
-void initializeDemoScenario() {
-    accessPoints.clear();
-    users.clear();
-
-    AccessPoint ap1;
-    ap1.id = "AP1";
-    ap1.capacityMbps = 100.0;
-    ap1.maxUsers = 25;
-    ap1.coverageRadius = 100.0;
-    ap1.baseLatencyMs = 8.0;
-    ap1.x = 0.0;
-    ap1.y = 0.0;
-    accessPoints.push_back(ap1);
-
-    AccessPoint ap2;
-    ap2.id = "AP2";
-    ap2.capacityMbps = 80.0;
-    ap2.maxUsers = 20;
-    ap2.coverageRadius = 100.0;
-    ap2.baseLatencyMs = 10.0;
-    ap2.x = 100.0;
-    ap2.y = 0.0;
-    accessPoints.push_back(ap2);
 
     for (int i = 0; i < 10; ++i) {
         User user;
