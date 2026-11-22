@@ -2,20 +2,6 @@
 
 
 
-    double readCoordinate(const string& prompt, double fallback) {
-        while (true) {
-            cout << prompt;
-            string line;
-            getline(cin, line);
-            if (line.empty()) return fallback;
-            stringstream stream(line);
-            double value;
-            char extra;
-            if ((stream >> value) && !(stream >> extra) && isfinite(value) && value >= -100000.0 && value <= 100000.0)
-                return value;
-            cout << "Enter a valid coordinate.\n";
-        }
-    }
 
     int readInt(const string& prompt, int minimum, int maximum, int fallback) {
         while (true) {
