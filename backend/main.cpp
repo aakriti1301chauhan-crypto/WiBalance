@@ -2,12 +2,7 @@
 
 
 
-class User {
-public:
-    string id;
-    string trafficType;
-    string currentAP;
-    double requestedMbps;
+
     double minimumMbps;
     double currentDemandMbps;
     double x;
