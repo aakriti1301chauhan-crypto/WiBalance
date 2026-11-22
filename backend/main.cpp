@@ -16,15 +16,7 @@
                  << "0. Exit\n";
             int choice = readInt("Choose option: ", 0, 8, -1);
             switch (choice) {
-                case 1: addAP(); break;
-                case 2: remov
-
-
-#ifndef WIBALANCE_HTTP_SERVER
-int main() {
-    WiBalance application;
-    application.menu();
-    return 0;
+                c
 }
 #else
 
