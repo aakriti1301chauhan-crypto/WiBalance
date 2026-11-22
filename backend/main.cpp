@@ -1,19 +1,6 @@
 
 
 
-
-    ~WiBalance() {
-        dsa_queue_destroy(assignmentQueue);
-        dsa_hash_destroy(userHash);
-    }
-
-    void menu() {
-        cout << "==============================================\n";
-        cout << " WiBalance - C DSA + C++ Classes and Objects\n";
-        cout << "==============================================\n";
-        cout << "Configure APs/users, then Start runs all " << finalTick << " ticks.\n";
-        cout << "This is a software simulation, not a controller for physical Wi-Fi APs.\n";
-
         while (true) {
             cout << "\n--- MAIN MENU | Last run: "
                  << (hasRun ? to_string(tick) + "/" + to_string(finalTick) : "not run")
