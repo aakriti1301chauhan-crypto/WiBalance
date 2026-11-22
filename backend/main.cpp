@@ -1,25 +1,4 @@
 
-:" << (status.finished ? "true" : "false") << ",";
-
-    json << "\"accessPoints\":[";
-    for (size_t i = 0; i < snapshot.accessPoints.size(); ++i) {
-        if (i > 0) json << ",";
-        const auto& ap = snapshot.accessPoints[i];
-
-        json << "{";
-        json << "\"id\":\"" << ap.id << "\",";
-        json << "\"loadPercent\":" << ap.loadPercent << ",";
-        json << "\"userCount\":" << ap.userCount << ",";
-        json << "\"capacityMbps\":" << ap.capacityMbps << ",";
-        json << "\"assignedDemandMbps\":" << ap.assignedDemandMbps << ",";
-        json << "\"channelUtilization\":" << ap.channelUtilization << ",";
-        json << "\"latencyMs\":" << ap.latencyMs << ",";
-        json << "\"packetLossPercent\":" << ap.packetLossPercent << ",";
-        json << "\"maxUsers\":" << ap.maxUsers << ",";
-        json << "\"status\":\"" << ap.status << "\"";
-        json << "}";
-    }
-    json << "],";
 
     json << "\"users\":[";
     for (size_t i = 0; i < snapshot.users.size(); ++i) {
