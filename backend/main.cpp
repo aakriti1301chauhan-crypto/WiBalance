@@ -3,13 +3,6 @@
 
 
 
-    double minimumMbps;
-    double currentDemandMbps;
-    double x;
-    double y;
-    int priority;       // 1 = Low, 2 = Normal, 3 = High
-    bool mobile;
-    double signalDbm;
 
     User()
         : requestedMbps(5.0), minimumMbps(1.0), currentDemandMbps(1.0),
