@@ -9,9 +9,7 @@
             "Access-Control-Allow-Methods: GET, POST, OPTIONS\r\n"
             "Access-Control-Allow-Headers: Content-Type\r\n"
             "Connection: close\r\n"
-            "Content-Length: " + to_string(body.size()) + "\r\n\r\n" + body;
-
-         0);
+           
        
        
  
