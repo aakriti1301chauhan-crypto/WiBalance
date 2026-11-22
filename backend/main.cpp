@@ -18,12 +18,7 @@
 
 
     
-            if (ap.channelUtilization > 100.0) ap.channelUtilization = 100.0;
-            ap.latencyMs = ap.baseLatencyMs;
-            if (ap.loadPercent > 40.0) ap.latencyMs += (ap.loadPercent - 40.0) * 0.50;
-            ap.packetLossPercent = ap.loadPercent > 85.0 ? (ap.loadPercent - 85.0) * 0.20 : 0.0;
-            if (ap.packetLossPercent > 20.0) ap.packetLossPercent = 20.0;
-        }
+           
         for (size_t i = 0; i < users.size(); ++i) {
             int apIndex = findAPIndex(users[i].currentAP);
             if (apIndex >= 0) users[i].signalDbm = signalAt(users[i], accessPoints[static_cast<size_t>(apIndex)]);
