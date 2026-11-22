@@ -19,25 +19,6 @@
     
 
 
-    cout << "\nSimulation finished at tick " << tick << ".\n";
-    cout << "\n--- FINAL ACCESS POINT RESULTS ---\n";
-    showAPs();
-    cout << "\n--- FINAL USER ASSIGNMENTS ---\n";
-    showUsers();
-}
-
-
-    void showSummary() const {
-        cout << "\n========== WIBALANCE SUMMARY ==========\n";
-        cout << "Ticks performed: " << (hasRun ? tick : 0) << "/" << finalTick << "\n";
-        cout << "Configured APs: " << accessPoints.size()
-             << " | Configured users: " << users.size() << "\n";
-        cout << "\n--- Access Point details (last run/current state) ---\n";
-        showAPs();
-        cout << "\n--- User details (last run/current state) ---\n";
-        showUsers();
-        cout << "=======================================\n";
-    }
 
 public:
     WiBalance()
