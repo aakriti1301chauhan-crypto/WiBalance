@@ -1,41 +1,5 @@
 
 
-
-
-        if (received > 0) {
-            string requestText(request, received);
-            istringstream requestStream(requestText);
-            string method, path;
-            requestStream >> method >> path;
-
-            
-if (method == "GET" && path == "/api/status") {
-    body = snapshotToJson(application);
-
-} else if (method == "POST" && path == "/api/configure") {
-   int apCount = 2;
-int userCount = 10;
-double capacityMbps = 100.0;
-
-size_t bodyStart = requestText.find("\r\n\r\n");
-
-if (bodyStart != string::npos) {
-    string jsonBody = requestText.substr(bodyStart + 4);
-
-    size_t apPos = jsonBody.find("\"apCount\"");
-    size_t userPos = jsonBody.find("\"userCount\"");
-    size_t capacityPos = jsonBody.find("\"capacityMbps\"");
-
-    if (apPos != string::npos)
-        apCount = stoi(jsonBody.substr(jsonBody.find(':', apPos) + 1));
-
-    if (userPos != string::npos)
-        userCount = stoi(jsonBody.substr(jsonBody.find(':', userPos) + 1));
-
-    if (capacityPos != string::npos)
-        capacityMbps = stod(jsonBody.substr(jsonBody.find(':', capacityPos) + 1));
-}
-
 bool configured = application.configureScenario(
     apCount, userCount, capacityMbps
 );
