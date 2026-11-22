@@ -22,25 +22,6 @@
 WiBalanceAPStatus getAPStatus(int index) const {
     WiBalanceAPStatus status;
 
-    if (index < 0 || index >= static_cast<int>(accessPoints.size())) {
-        return status;
-    }
-
-    const AccessPoint& ap = accessPoints[static_cast<size_t>(index)];
-
-    status.id = ap.id;
-    status.loadPercent = ap.loadPercent;
-    status.userCount = static_cast<int>(ap.userIds.size());
-    status.capacityMbps = ap.capacityMbps;
-    status.assignedDemandMbps = ap.assignedDemandMbps;
-    status.channelUtilization = ap.channelUtilization;
-    status.latencyMs = ap.latencyMs;
-    status.packetLossPercent = ap.packetLossPercent;
-    status.maxUsers = ap.maxUsers;
-    status.status = statusOf(ap);
-
-    return status;
-}
 
 
 
