@@ -9,21 +9,7 @@
  
 
 
-    void addUser() {
-        User user;
-        user.id = readLine("User ID [blank = auto]: ");
-        if (user.id.empty()) user.id = makeNextUserId();
-        if (findUserIndex(user.id) >= 0) {
-            cout << "A user with that ID already exists.\n";
-            return;
-        }
-        user.trafficType = readTrafficType();
-        user.requestedMbps = readPositiveDouble("Requested bandwidth (Mbps) [default 5]: ", 5.0);
-        user.minimumMbps = readPositiveDouble("Minimum required bandwidth (Mbps) [default 1]: ", 1.0);
-        if (user.minimumMbps > user.requestedMbps) {
-            cout << "Minimum bandwidth cannot exceed requested bandwidth. User not added.\n";
-            return;
-        }
+   
         user.priority = readPriority();
         user.x = readCoordinate("User location X [default 0]: ", 0.0);
         user.y = readCoordinate("User location Y [default 0]: ", 0.0);
