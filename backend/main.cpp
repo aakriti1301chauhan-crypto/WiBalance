@@ -10,16 +10,7 @@
 
 
 
-    string makeNextUserId() const {
-        int larg largest) largest = number;
-                } catch (...) {}
-            }
-        }.size(); ++i) pointers.push_back(ids[i].c_str());
-        return dsa_linear_search_strings(pointers.data(), static_cast<int>(pointers.size()), id.c_str());
-    }
-
-    void rebuildUserHash() {
-        dsa_hash_clear(userHash);
+    string makeNexerHash);
         for (int i = 0; i < static_cast<int>(users.size()); ++i) {
             dsa_hash_put(userHash, users[i].id.c_str(), i);
         }
