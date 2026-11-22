@@ -8,10 +8,7 @@
 
 
 
-    DSAHashHandle userHash;
-    DSAQueueHandle assignmentQueue;
-    mt19937 randomEngine;
-    int tick;
+  
     int finalTick;
     bool hasRun;
 
