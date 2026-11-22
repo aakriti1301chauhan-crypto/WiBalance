@@ -2,9 +2,6 @@
 
 
 
-    double readPositiveDouble(const string& prompt, double fallback) {
-        while (true) {
-            cout << prompt;
             string line;
             getline(cin, line);
             if (line.empty()) return fallback;
