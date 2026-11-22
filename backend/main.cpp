@@ -1,26 +1,6 @@
 
 
-    if (listen(serverSocket, SOMAXCONN) == SOCKET_ERROR) {
-        cerr << "Server listen failed.\n";
-        closesocket(serverSocket);
-        WSACleanup();
-        return;
-    }
 
-    cout << "WiBalance HTTP server running at http://127.0.0.1:8080\n";
-
-    while (true) {
-        SOCKET client = accept(serverSocket, nullptr, nullptr);
-        if (client == INVALID_SOCKET) continue;
-
-        char request[4096]{};
-        int received = recv(client, request, sizeof(request) - 1, 0);
-       string body =
-    "{\"error\":\"Unsupported endpoint\","
-    "\"availableEndpoints\":["
-    "\"GET /api/status\","
-    "\"POST /api/start\","
-    "\"POST /api/step\"]}";
 
         if (received > 0) {
             string requestText(request, received);
