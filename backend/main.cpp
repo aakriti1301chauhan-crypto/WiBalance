@@ -15,13 +15,7 @@
     
 
    
-
-
-        if (projectedLoad > 100.0) loadScore -= (projectedLoad - 100.0) / 60.0;
-        if (projectedClients > ap.maxUsers) clientScore -= (projectedClients - ap.maxUsers) / 5.0;
-
-        return priorityWeight * (loadWeight * loadScore + signalWeight * signalScore
-                               + 0.17 * latencyScore + 0.15 * clientScore);
+ 0.15 * clientScore);
     }
 
     int bestAPFor(const User& user) const {
