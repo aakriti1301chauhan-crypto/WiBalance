@@ -12,25 +12,7 @@
    
     
 
-        }
-        cout << left << setw(8) << "AP" << right << setw(8) << "Users"
-             << setw(11) << "Load%" << setw(12) << "Channel%"
-             << setw(12) << "Latency" << setw(10) << "Loss%"
-             << setw(11) << "MaxUsers" << "   Status\n";
-        cout << string(91, '-') << "\n";
-        for (size_t i = 0; i < accessPoints.size(); ++i) {
-            const AccessPoint& ap = accessPoints[i];
-            cout << left << setw(8) << ap.id << right << setw(8) << ap.userIds.size()
-                 << setw(10) << fixed << setprecision(1) << ap.loadPercent << "%"
-                 << setw(11) << ap.channelUtilization << "%"
-                 << setw(9) << ap.latencyMs << " ms"
-                 << setw(9) << ap.packetLossPercent << "%"
-                 << setw(11) << ap.maxUsers << "   " << statusOf(ap) << "\n";
-            cout << "  Capacity: " << ap.capacityMbps << " Mbps | Coverage: "
-                 << ap.coverageRadius << " m | Base latency: " << ap.baseLatencyMs
-                 << " ms | Location: (" << ap.x << ", " << ap.y << ")\n";
-        }
-    }
+   
 
     void showUsers() const {
         if (users.empty()) {
