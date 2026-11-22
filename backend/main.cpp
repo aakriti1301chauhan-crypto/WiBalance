@@ -1,22 +1,5 @@
 
-
-
-
-string snapshotToJson(const WiBalance& application) {
-    WiBalanceSnapshot snapshot = application.getSnapshot();
-    const WiBalanceStatus& status = snapshot.status;
-
-    ostringstream json;
-    json << fixed << setprecision(2);
-
-    json << "{\"service\":\"WiBalance\",";
-    json << "\"status\":\"online\",";
-    json << "\"simulationConnected\":true,";
-    json << "\"tick\":" << status.currentTick << ",";
-    json << "\"totalTicks\":" << status.totalTicks << ",";
-    json << "\"accessPointCount\":" << status.accessPointCount << ",";
-    json << "\"userCount\":" << status.userCount << ",";
-    json << "\"finished\":" << (status.finished ? "true" : "false") << ",";
+:" << (status.finished ? "true" : "false") << ",";
 
     json << "\"accessPoints\":[";
     for (size_t i = 0; i < snapshot.accessPoints.size(); ++i) {
