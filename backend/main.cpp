@@ -5,13 +5,7 @@
 
 
  
-    string id;
-    double capacityMbps;
-    int maxUsers;
-    double coverageRadius;
-    double baseLatencyMs;
-    
-};
+
 
 class WiBalance {
 private:
