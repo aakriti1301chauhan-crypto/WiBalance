@@ -12,25 +12,6 @@
    
     
 
-   
-ot.accessPoints.push_back(getAPStatus(i));
-    }
-
-    for (const User& user : users) {
-        WiBalanceUserStatus userStatus;
-        userStatus.id = user.id;
-        userStatus.assignedAP = user.currentAP;
-        userStatus.trafficType = user.trafficType;
-        userStatus.demandMbps = user.currentDemandMbps;
-        userStatus.signalDbm = user.signalDbm;
-        userStatus.priority = user.priority;
-        userStatus.mobile = user.mobile;
-
-        snapshot.users.push_back(userStatus);
-    }
-
-    return snapshot;
-}
 
 
 void initializeDemoScenario() {
