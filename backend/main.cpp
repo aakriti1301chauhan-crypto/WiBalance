@@ -22,11 +22,7 @@
     }
 
     void globallyRedistributeUsers() {
-        clearAssignments();
-        if (users.empty() || accessPoints.empty()) {
-            recalculateAPMetrics();
-            return;
-        }
+ 
 
         /* C insertion sort orders high-priority/heavier-demand users first. */
         vector<int> indices(users.size());
