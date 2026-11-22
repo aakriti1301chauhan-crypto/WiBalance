@@ -10,12 +10,7 @@
 
 
 
-    string makeNexerHash);
-        for (int i = 0; i < static_cast<int>(users.size()); ++i) {
-            dsa_hash_put(userHash, users[i].id.c_str(), i);
-        }
-    } * ratio;
-    }
+  
 
     double demandForType(const User& user) const {
         double base = user.requestedMbps;
