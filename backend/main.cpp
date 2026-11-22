@@ -16,16 +16,6 @@
 
    
 
-        double projectedClients = static_cast<double>(ap.userIds.size() + 1);
-        double clientPercent = ap.maxUsers > 0 ? projectedClients / ap.maxUsers * 100.0 : 1000.0;
-        double predictedLatency = ap.baseLatencyMs + (projectedLoad > 40.0 ? (projectedLoad - 40.0) * 0.50 : 0.0);
-        double loadScore = 1.0 - projectedLoad / 140.0;
-        double signalScore = (signal + 90.0) / 55.0;
-        double latencyScore = 1.0 - predictedLatency / 180.0;
-        double clientScore = 1.0 - clientPercent / 140.0;
-        double priorityWeight = 1.0 + static_cast<double>(user.priority) * 0.025;
-        double loadWeight = user.mobile ? 0.35 : 0.43;
-        double signalWeight = user.mobile ? 0.33 : 0.25;
 
         if (projectedLoad > 100.0) loadScore -= (projectedLoad - 100.0) / 60.0;
         if (projectedClients > ap.maxUsers) clientScore -= (projectedClients - ap.maxUsers) / 5.0;
