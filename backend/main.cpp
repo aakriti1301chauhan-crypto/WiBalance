@@ -1,11 +1,5 @@
 
 
-    string statusOf(const AccessPoint& ap) const {
-        if (ap.loadPercent >= CONGESTION_LIMIT || ap.userIds.size() > static_cast<size_t>(ap.maxUsers))
-            return "CONGESTED";
-        if (ap.loadPercent >= 55.0) return "MODERATE";
-        return "HEALTHY";
-    }
 
     string priorityName(int priority) const {
         if (priority >= 3) return "High";
