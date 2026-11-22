@@ -13,24 +13,7 @@
     
 
    
-
-   
-
-    
-
-
-WiBalanceAPStatus getAPStatus(int index) const {
-    WiBalanceAPStatus status;
-
-
-
-
-WiBalanceSnapshot getSnapshot() const {
-    WiBalanceSnapshot snapshot;
-    snapshot.status = getStatus();
-
-    for (int i = 0; i < getAccessPointCount(); ++i) {
-        snapshot.accessPoints.push_back(getAPStatus(i));
+ot.accessPoints.push_back(getAPStatus(i));
     }
 
     for (const User& user : users) {
