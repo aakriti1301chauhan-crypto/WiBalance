@@ -7,10 +7,7 @@
  
 
 
-class WiBalance {
-private:
-    vector<AccessPoint> accessPoints;
-    vector<User> users;
+
     DSAHashHandle userHash;
     DSAQueueHandle assignmentQueue;
     mt19937 randomEngine;
