@@ -15,21 +15,6 @@
 
 
 
-    for (int i = 0; i < 10; ++i) {
-        User user;
-        user.id = "U" + to_string(101 + i);
-        user.trafficType = (i % 2 == 0) ? "Video" : "Web";
-        user.requestedMbps = 10.0;
-        user.minimumMbps = 1.0;
-        user.currentDemandMbps = 5.0;
-        user.priority = (i % 3 == 0) ? 3 : 2;
-        user.mobile = (i % 2 == 0);
-        user.x = (i < 5) ? 15.0 : 85.0;
-        user.y = (i % 3) * 10.0;
-        users.push_back(user);
-    }
-
-    rebuildUserHash();
 
     tick = 0;
     hasRun = false;
