@@ -4,13 +4,7 @@
 
 
 
-    User()
-        : requestedMbps(5.0), minimumMbps(1.0), currentDemandMbps(1.0),
-          x(0.0), y(0.0), priority(2), mobile(false), signalDbm(-100.0) {}
-};
-
-class AccessPoint {
-public:
+ 
     string id;
     double capacityMbps;
     int maxUsers;
