@@ -10,25 +10,7 @@
 
 
    
-        user.priority = readPriority();
-        user.x = readCoordinate("User location X [default 0]: ", 0.0);
-        user.y = readCoordinate("User location Y [default 0]: ", 0.0);
-        cout << "Is this user mobile? (y/n, default n): ";
-        string mobileAnswer;
-        getline(cin, mobileAnswer);
-        user.mobile = (mobileAnswer == "y" || mobileAnswer == "Y" || mobileAnswer == "yes");
-        user.currentDemandMbps = demandForType(user);
-        users.push_back(user);
-        rebuildUserHash();
-        cout << "\nAdded " << user.id << ". The algorithm will choose its AP.\n";
-        if (accessPoints.empty()) {
-            cout << "No APs exist yet. Add an AP before starting the simulation.\n";
-            hasRun = false;
-            tick = 0;
-            return;
-        }
-        askToRunAfterChange();
-    }
+    
 
     void removeUser() {
         string id = readLine("User ID to remove: ");
