@@ -21,17 +21,7 @@
         int larg largest) largest = number;
                 } catch (...) {}
             }
-        }
-        return "U" + to_string(largest + 1);
-    }
-
-    int findAPIndex(const string& id) const {
-        vector<string> ids;
-        vector<const char*> pointers;
-        ids.reserve(accessPoints.size());
-        pointers.reserve(accessPoints.size());
-        for (size_t i = 0; i < accessPoints.size(); ++i) ids.push_back(accessPoints[i].id);
-        for (size_t i = 0; i < ids.size(); ++i) pointers.push_back(ids[i].c_str());
+        }.size(); ++i) pointers.push_back(ids[i].c_str());
         return dsa_linear_search_strings(pointers.data(), static_cast<int>(pointers.size()), id.c_str());
     }
 
