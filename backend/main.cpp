@@ -18,13 +18,7 @@
             co
 
     string makeNextUserId() const {
-        int largest = 100;
-        for (size_t i = 0; i < users.size(); ++i) {
-            const string& id = users[i].id;
-            if (id.size() > 1 && id[0] == 'U') {
-                try {
-                    int number = stoi(id.substr(1));
-                    if (number > largest) largest = number;
+        int larg largest) largest = number;
                 } catch (...) {}
             }
         }
