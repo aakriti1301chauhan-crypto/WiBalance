@@ -12,23 +12,6 @@
    
     
 
-    void removeUser() {
-        string id = readLine("User ID to remove: ");
-        int index = findUserIndex(id);
-        if (index < 0) {
-            cout << "User not found.\n";
-            return;
-        }
-        users.erase(users.begin() + index);
-        rebuildUserHash();
-        cout << "Removed " << id << ". Remaining users will be redistributed when the simulation starts.\n";
-        askToRunAfterChange();
-    }
-
-    void showAPs() const {
-        if (accessPoints.empty()) {
-            cout << "No access points configured.\n";
-            return;
         }
         cout << left << setw(8) << "AP" << right << setw(8) << "Users"
              << setw(11) << "Load%" << setw(12) << "Channel%"
