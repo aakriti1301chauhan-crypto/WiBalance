@@ -5,17 +5,6 @@
 
    
 
-   
-    string readTrafficType() {
-        cout << "Traffic type: 1.Video  2.Download  3.Voice  4.Gaming  5.Web  6.Messaging\n";
-        int choice = readInt("Choose traffic type [1-6]: ", 1, 6, 1);
-        if (choice == 1) return "Video";
-        if (choice == 2) return "Download";
-        if (choice == 3) return "Voice";
-        if (choice == 4) return "Gaming";
-        if (choice == 5) return "Web";
-        return "Messaging";
-    }
 
     int readPriority() {
         cout << "Priority: 1.Low  2.Normal  3.High\n";
