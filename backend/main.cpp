@@ -14,23 +14,6 @@
 
 
 
-
-
-    tick = 0;
-    hasRun = false;
-
-    updateTrafficDemand();
-    globallyRedistributeUsers();
-}
-
-bool configureScenario(int apCount, int userCount, double capacityMbps) {
-    if (apCount < 1 || apCount > 10 ||
-        userCount < 1 || userCount > 200 ||
-        !isfinite(capacityMbps) ||
-        capacityMbps < 1.0 || capacityMbps > 10000.0) {
-        return false;
-    }
-
     accessPoints.clear();
     users.clear();
 
