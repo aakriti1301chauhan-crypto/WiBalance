@@ -9,9 +9,5 @@ extern "C" {
 typedef void *DSAQueueHandle;
 typedef void *DSAHashHandle;
 
-DSAQueueHandle dsa_queue_create(void);
-void dsa_queue_destroy(DSAQueueHandle queue);
-int dsa_queue_enqueue(DSAQueueHandle queue, const char *value);
-int dsa_queue_dequeue(DSAQueueHandle queue, char *out_value, int out_size);
 
 
