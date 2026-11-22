@@ -15,14 +15,8 @@
     string makeNextAPId() const {
         int largest = 0;
         for (size_t i = 0; i < accessPoints.size(); ++i) {
-            const string& id = accessPoints[i].id;
-            if (id.size() > 2 && id.substr(0, 2) == "AP") {
-                try {
-                    int number = stoi(id.substr(2));
-                    if (number > largest) largest = number;
-                } catch (...) {}
-           
-                
+            co
+
     string makeNextUserId() const {
         int largest = 100;
         for (size_t i = 0; i < users.size(); ++i) {
