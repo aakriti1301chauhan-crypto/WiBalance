@@ -3,20 +3,7 @@
 
 
 
-    int readInt(const string& prompt, int minimum, int maximum, int fallback) {
-        while (true) {
-            cout << prompt;
-            string line;
-            getline(cin, line);
-            if (line.empty()) return fallback;
-            stringstream stream(line);
-            int value;
-            char extra;
-            if ((stream >> value) && !(stream >> extra) && value >= minimum && value <= maximum)
-                return value;
-            cout << "Enter a number from " << minimum << " to " << maximum << ".\n";
-        }
-    }
+   
 
     string readLine(const string& prompt, const string& fallback = "") {
         cout << prompt;
