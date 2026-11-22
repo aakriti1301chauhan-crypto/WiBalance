@@ -17,13 +17,7 @@
    
 
 
-    void recalculateAPMetrics() {
-        for (size_t i = 0; i < accessPoints.size(); ++i) {
-            AccessPoint& ap = accessPoints[i];
-            ap.loadPercent = ap.capacityMbps > 0.0
-                ? ap.assignedDemandMbps / ap.capacityMbps * 100.0 : 1000.0;
-            if (ap.loadPercent < 0.0) ap.loadPercent = 0.0;
-            ap.channelUtilization = ap.loadPercent * 0.88;
+    
             if (ap.channelUtilization > 100.0) ap.channelUtilization = 100.0;
             ap.latencyMs = ap.baseLatencyMs;
             if (ap.loadPercent > 40.0) ap.latencyMs += (ap.loadPercent - 40.0) * 0.50;
