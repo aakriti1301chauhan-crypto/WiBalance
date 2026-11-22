@@ -6,20 +6,7 @@
    
 
 
-    int readPriority() {
-        cout << "Priority: 1.Low  2.Normal  3.High\n";
-        return readInt("Choose priority [1-3, default 2]: ", 1, 3, 2);
-    }
-
-    void askToRunAfterChange() {
-        hasRun = false;
-        tick = 0;
-        cout << "\nConfiguration changed. Start simulation now? (y/n): ";
-        string answer;
-        getline(cin, answer);
-        if (answer == "y" || answer == "Y" || answer == "yes" || answer == "YES")
-            startSimulation();
-    }
+   
 
     void addAP() {
         AccessPoint ap;
