@@ -12,18 +12,7 @@
 
   
 
-    double demandForType(const User& user) const {
-        double base = user.requestedMbps;
-        if (user.trafficType == "Video") base *= 0.78;
-        else if (user.trafficType == "Download") base *= 0.92;
-        else if (user.trafficType == "Voice") base *= 0.14;
-        else if (user.trafficType == "Gaming") base *= 0.22;
-        else if (user.trafficType == "Web") base *= 0.30;
-        else if (user.trafficType == "Messaging") base *= 0.06;
-        if (base < user.minimumMbps) base = user.minimumMbps;
-        if (base > user.requestedMbps) base = user.requestedMbps;
-        return base;
-    }
+    
 
     void updateTrafficDemand() {
         uniform_real_distribution<double> variation(0.85, 1.15);
