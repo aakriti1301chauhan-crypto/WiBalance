@@ -8,24 +8,6 @@
 
  
 
-    void removeAP() {
-        if (accessPoints.empty()) {
-            cout << "No AP exists to remove.\n";
-            return;
-        }
-        string id = readLine("AP ID to remove: ");
-        int index = findAPIndex(id);
-        if (index < 0) {
-            cout << "AP not found.\n";
-            return;
-        }
-        accessPoints.erase(accessPoints.begin() + index);
-        for (size_t i = 0; i < users.size(); ++i) {
-            if (users[i].currentAP == id) users[i].currentAP.clear();
-        }
-        cout << "Removed " << id << ". Users will be redistributed when the simulation starts.\n";
-        askToRunAfterChange();
-    }
 
     void addUser() {
         User user;
