@@ -18,17 +18,7 @@
 t<size_t>(index)].id != id) return -1;
         return index;
     }
-
-    double distanceBetween(double x1, double y1, double x2, double y2) const {
-        double dx = x1 - x2;
-        double dy = y1 - y2;
-        return sqrt(dx * dx + dy * dy);
-    }
-
-    double signalAt(const User& user, const AccessPoint& ap) const {
-        double distance = distanceBetween(user.x, user.y, ap.x, ap.y);
-        if (ap.coverageRadius <= 0.0) return -100.0;
-        double ratio = distance / ap.coverageRadius;
+ = distance / ap.coverageRadius;
         return -35.0 - 48.0 * ratio;
     }
 
