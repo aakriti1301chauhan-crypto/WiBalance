@@ -1,24 +1,5 @@
 
 
-bool configured = application.configureScenario(
-    apCount, userCount, capacityMbps
-);
-
-    body = configured
-        ? snapshotToJson(application)
-        : "{\"error\":\"Invalid simulation configuration\"}";
-
-} else if (method == "POST" && path == "/api/start") {
-    bool started = application.beginSimulation();
-    body = started
-        ? snapshotToJson(application)
-        : "{\"error\":\"Add access points and users first\"}";
-
-} else if (method == "POST" && path == "/api/step") {
-    application.advanceOneTick();
-    body = snapshotToJson(application);
-}
-
         }
 
         string response =
