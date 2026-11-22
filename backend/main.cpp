@@ -17,9 +17,6 @@
    
  0.15 * clientScore);
     }
-
-    int bestAPFor(const User& user) const {
-        int bestIndex = -1;
         double bestScore = -1.0e9;
         for (int i = 0; i < static_cast<int>(accessPoints.size()); ++i) {
             double score = candidateScore(user, accessPoints[static_cast<size_t>(i)]);
