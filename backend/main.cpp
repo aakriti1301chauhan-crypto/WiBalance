@@ -14,12 +14,7 @@
         for (int i = 0; i < static_cast<int>(users.size()); ++i) {
             dsa_hash_put(userHash, users[i].id.c_str(), i);
         }
-    }
-t<size_t>(index)].id != id) return -1;
-        return index;
-    }
- = distance / ap.coverageRadius;
-        return -35.0 - 48.0 * ratio;
+    } * ratio;
     }
 
     double demandForType(const User& user) const {
