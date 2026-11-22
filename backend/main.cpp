@@ -19,19 +19,6 @@
     
 
 
-
-
-WiBalanceStatus getStatus() const {
-    WiBalanceStatus status;
-    status.currentTick = tick;
-    status.totalTicks = finalTick;
-    status.accessPointCount = static_cast<int>(accessPoints.size());
-    status.userCount = static_cast<int>(users.size());
-    status.finished = hasRun;
-    return status;
-}
-
-
 WiBalanceAPStatus getAPStatus(int index) const {
     WiBalanceAPStatus status;
 
