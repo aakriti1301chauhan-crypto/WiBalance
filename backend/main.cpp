@@ -14,4 +14,4 @@
         send(client, response.c_str(), static_cast<int>(response.size()), 0);
         shutdown(client, SD_SEND);
         closesocket(client);
-    }
+ 
