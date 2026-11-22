@@ -1,27 +1,5 @@
 
 
-
-
-    SOCKET serverSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-    if (serverSocket == INVALID_SOCKET) {
-        cerr << "Socket creation failed.\n";
-        WSACleanup();
-        return;
-    }
-
-    sockaddr_in address{};
-    address.sin_family = AF_INET;
-    address.sin_port = htons(8080);
-    address.sin_addr.s_addr = inet_addr("127.0.0.1");
-
-    if (bind(serverSocket, reinterpret_cast<sockaddr*>(&address),
-              sizeof(address)) == SOCKET_ERROR) {
-        cerr << "Could not bind port 8080. Stop server.exe if it is running.\n";
-        closesocket(serverSocket);
-        WSACleanup();
-        return;
-    }
-
     if (listen(serverSocket, SOMAXCONN) == SOCKET_ERROR) {
         cerr << "Server listen failed.\n";
         closesocket(serverSocket);
