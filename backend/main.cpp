@@ -12,29 +12,6 @@
    
     
 
-
-
-    accessPoints.clear();
-    users.clear();
-
-    for (int i = 0; i < apCount; ++i) {
-        AccessPoint ap;
-        ap.id = "AP" + to_string(i + 1);
-        ap.capacityMbps = capacityMbps;
-        ap.maxUsers = 25;
-        ap.coverageRadius = 100.0;
-        ap.baseLatencyMs = 8.0 + i;
-        ap.x = (apCount == 1) ? 50.0
-                              : i * 100.0 / (apCount - 1);
-        ap.y = 0.0;
-
-        accessPoints.push_back(ap);
-    }
-
-    const string trafficTypes[] = {
-        "Video", "Web", "Gaming", "Voice", "Download", "Messaging"
-    };
-
     for (int i = 0; i < userCount; ++i) {
         User user;
         user.id = "U" + to_string(101 + i);
