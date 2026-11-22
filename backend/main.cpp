@@ -14,15 +14,7 @@
 
     
 
-    void updateTrafficDemand() {
-        uniform_real_distribution<double> variation(0.85, 1.15);
-        for (size_t i = 0; i < users.size(); ++i) {
-            double demand = demandForType(users[i]) * variation(randomEngine);
-            if (demand < users[i].minimumMbps) demand = users[i].minimumMbps;
-            if (demand > users[i].requestedMbps) demand = users[i].requestedMbps;
-            users[i].currentDemandMbps = demand;
-        }
-    }
+   
 
     double candidateScore(const User& user, const AccessPoint& ap) const {
         double distance = distanceBetween(user.x, user.y, ap.x, ap.y);
