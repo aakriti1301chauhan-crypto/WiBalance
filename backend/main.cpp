@@ -18,11 +18,7 @@
 
 
     
-           
-        for (size_t i = 0; i < users.size(); ++i) {
-            int apIndex = findAPIndex(users[i].currentAP);
-            if (apIndex >= 0) users[i].signalDbm = signalAt(users[i], accessPoints[static_cast<size_t>(apIndex)]);
-        }
+    
     }
 
     void globallyRedistributeUsers() {
