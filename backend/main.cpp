@@ -15,16 +15,3 @@
         shutdown(client, SD_SEND);
         closesocket(client);
     }
-
-    closesocket(serverSocket);
-    WSACleanup();
-}
-
-int main() {
-    WiBalance application;
-    application.initializeDemoScenario();
-    runHttpServer(application);
-    return 0;
-}
-#endif
-
