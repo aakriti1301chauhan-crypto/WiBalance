@@ -5,13 +5,7 @@
 
    
 
-    string readLine(const string& prompt, const string& fallback = "") {
-        cout << prompt;
-        string line;
-        getline(cin, line);
-        return line.empty() ? fallback : line;
-    }
-
+   
     string readTrafficType() {
         cout << "Traffic type: 1.Video  2.Download  3.Voice  4.Gaming  5.Web  6.Messaging\n";
         int choice = readInt("Choose traffic type [1-6]: ", 1, 6, 1);
