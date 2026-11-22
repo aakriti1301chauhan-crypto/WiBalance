@@ -1,12 +1,6 @@
 
 
 
-void runHttpServer(WiBalance& application) {
-    WSADATA wsaData;
-    if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
-        cerr << "Winsock startup failed.\n";
-        return;
-    }
 
     SOCKET serverSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (serverSocket == INVALID_SOCKET) {
